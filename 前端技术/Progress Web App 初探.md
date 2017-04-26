@@ -10,9 +10,9 @@
 ### 什么是 Progressive Web App?
 #### 1、先看看目前流行的App分类：Native App、Hybrid App、Web App
 ![此处输入图片的描述][1]
-**Native App：**原生的应用，直接使用Object C(ios)或者Java(android)开发的App。
-**Web App：**即一般的网页应用，在浏览器中打开。
-**Hybrid App：**半原生半Web的混合类App，普遍采用的是Native的框架，Web的内容。如快塑网App，由Cordova提供不同系统的native框架，并向页面暴露访问设备的接口，使用Polymer等前端技术编写UI。
+**Native App：** 原生的应用，直接使用Object C(ios)或者Java(android)开发的App。
+**Web App：** 即一般的网页应用，在浏览器中打开。
+**Hybrid App：** 半原生半Web的混合类App，普遍采用的是Native的框架，Web的内容。如快塑网App，由Cordova提供不同系统的native框架，并向页面暴露访问设备的接口，使用Polymer等前端技术编写UI。
 
 |&nbsp;|Native App|Web App|PWA|
 |:--|:---|:---|:---|
