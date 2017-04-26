@@ -73,7 +73,8 @@ $ ssh sandbox4
 ```
 $ ssh weihu
 ```
-~~~妈妈再也不用担心我找不到sandbox的ip和密码了！
+~~妈妈再也不用担心我找不到sandbox的ip和密码了！
+
 # SSH穿越跳板机
 你若少输一次密码，便是晴天，更何况是两次。
 >这里以sandbox1为例。要远程到sandbox1，首先你得先ssh到跳板机，然后在从跳板机ssh到sandbox1。
