@@ -203,7 +203,7 @@
     set.clear();    
     ```
     - Set的遍历。Set是没有键的，但是为了使Set、Map、数组的forEach方法的回调函数保持参数相同，Set的每一项同时认定为键与值。
-    ```
+    ```javascript
     // 遍历集合
     set.forEach((value, key, ownerSet) => {
         console.log(`${key}: ${value}`);   
@@ -216,7 +216,7 @@
     // true
     ```
     - Set与Array的相互转化
-    ```
+    ```javascript
     // 使用数组初始化set
     let set = new Set([1,2,3,4,5,5,5]);
     console.log(set);   // Set {1,2,3,4,5}
@@ -374,7 +374,7 @@
         
 - **作为一级公民的类**
     - **在编程中，能被当做值来使用的就称为*一级公民*（first-class citizen）**。ES6中的类被定义为一级公民。
-    ```javacript
+    ```javascript
     function createObj(classDef) {
         return new classDef();
     }
@@ -572,7 +572,7 @@
         - 如果一个拥有Symbol.species定义的类创建了派生类，要保证该类的方法返回类实例的时候使用此属性，而不是直接使用构造器。
 - **new.target**
     - 在类构造器中通过 ``new.target`` 来判断类是如何被调用的。
-    ```
+    ```javascript
     class Rectangle {
         constructor(length, width) {
             console.log(new.target === Rectangle);  

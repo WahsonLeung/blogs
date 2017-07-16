@@ -15,7 +15,6 @@
        - [7、Set与Map](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/ES6%E5%88%9D%E6%8E%A2%EF%BC%88%E4%BA%8C%EF%BC%89.md#7set与map)
        - [8、迭代器与生成器](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/ES6%E5%88%9D%E6%8E%A2%EF%BC%88%E4%BA%8C%EF%BC%89.md#8迭代器与生成器)
        - [9、JS的类](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/ES6%E5%88%9D%E6%8E%A2%EF%BC%88%E4%BA%8C%EF%BC%89.md#9js的类)
-
     * [ES6初探（三）](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/ES6%E5%88%9D%E6%8E%A2%EF%BC%88%E4%B8%89%EF%BC%89.md)
 * linux
     * [SSH免登录](https://github.com/mrLeung/blogs/blob/master/linux/SSH%E5%85%8D%E7%99%BB%E5%BD%95.md)
