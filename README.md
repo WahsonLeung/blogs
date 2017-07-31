@@ -1,6 +1,6 @@
 # 讲讲故事，记录一些日常。
 * 前端技术
-    * [Fetch API浅读](https://github.com/mrLeung/blogs/blob/master/前端技术/Fetch%20API.md)
+    * [Fetch API浅读](https://github.com/mrLeung/blogs/blob/master/前端技术/Fetch%20API浅读.md)
     * [Progressive Web App初探](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/Progress%20Web%20App%20%E5%88%9D%E6%8E%A2.md)
     * [Polymer 2.0 学习笔记](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/Polymer2.0%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md)
     * [App Route](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/App%20Route.md)
