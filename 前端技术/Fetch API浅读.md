@@ -1,10 +1,46 @@
-# Fetch API
+# Fetch API浅读
 
 标签（空格分隔）： 前端
 
----
-### [Fetch api][2]的几个核心类
-#### [Headers][3]
+------
+
+## fetch的简单demo
+```javascript
+// 提交一个get请求
+fetch("/data.json").then((res) => {
+  // res instanceof Response == true.
+  if (res.ok) {
+    res.json().then(function(data) {
+      console.log(data.entries);
+    });
+  } else {
+    console.log("Looks like the response wasn't perfect, got status", res.status);
+  }
+}, (e) => {
+  console.log("Fetch failed!", e);
+});
+
+//
+// 提交一个post请求
+fetch("http://www.example.org/submit.php", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body: "firstName=Nikhil&favColor=blue&password=easytoguess"
+}).then((res) => {
+  if (res.ok) {
+    alert("Perfect! Your settings are saved.");
+  } else if (res.status == 401) {
+    alert("Oops! You are not authorized.");
+  }
+}, (e) => {
+  alert("Error submitting form!");
+});
+```
+
+## [fetch api][2]的几个核心接口
+### [Headers][3]
 - **API**
 ```javascript
 // Constructor
@@ -116,7 +152,7 @@ for(let en of reqHeaders.entries()) {
     - Expires
     - Last-Modified
     - Pragma
-#### [Request][4]
+### [Request][4]
 - API
 ```javascript  
 // Constructor
@@ -150,8 +186,15 @@ new Request("/uploadImage", {
         - omit：不发送cookie。
         - include：所有请求都会发送cookie，包括跨域请求。
         - same-origin：只有同源的请求才发送cookie。
-#### [Response][5]
-- type: ``basic`` | ``cors`` | ``error`` | ``opaque``
+    - redirect: ``follow(默认值)`` | ``error`` | ``manual``
+
+
+### [Response][5]
+- Response.ok: 如果http请求的状态码是2XX，则返回true，否则返回false。
+- Response.status: 响应的状态码，如200。
+- Response.statusText: 状态码的信息，如“OK”。
+- Response.headers: 响应头（with guard "response"），只读。
+- Response.type: ``basic`` | ``cors`` | ``error`` | ``opaque``
     - basic：正常的同源请求，包含``Set-Cookie``和``Set-Cookie2``以外的所有headers。
     - cors：Response从一个合法的跨域请求获得，一部分header和body可读。
     - error：网络错误，当Response是从Response.error()中得到时，就是这种类型。此时status是0，headers是空且不可写。且会导致fetch()函数的Promise被reject并回调出一个TypeError。
@@ -174,9 +217,25 @@ new Request("/uploadImage", {
     - formData()
 
 - 不管是Request还是Response中的body只能被读取一次。它们中有一个属性``bodyUsed``标识body是否被读取。
+- Request和Response的body都是只能被读取一次，那么如何让body可以多次读取呢？使用``clone()``，在body被读取前，先对Request或Response克隆，然后再读取。
+    ```javascript
+    fetch('/demo.json', res => {
+        if(res.ok) {
+            console.log(res.bodyUsed); // false
+            const clone = res.clone();
+            console.log(clone.bodyUsed); // false
+
+            clone.text();
+            console.log(res.bodyUsed); // false
+            console.log(clone.bodyUsed); // true
+        }
+    }, console.log);
+    ```
+
+## Redirect with fetch
 
 
-#### 参考文献
+## 参考文献
 1. https://hacks.mozilla.org/2015/03/this-api-is-so-fetching/
 2. https://fetch.spec.whatwg.org/
 3. https://github.com/github/fetch/blob/master/fetch.js
