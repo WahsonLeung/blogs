@@ -1,5 +1,6 @@
 # 讲讲故事，记录一些日常。
 * 前端技术
+    * [Fetch API浅读](https://github.com/mrLeung/blogs/blob/master/前端技术/Fetch%20API浅读.md)
     * [CSS3选择器](https://github.com/mrLeung/blogs/blob/master/前端技术/CSS3选择器.md)
     * [Fetch API浅读](https://github.com/mrLeung/blogs/blob/master/前端技术/Fetch%20API.md)
     * [Progressive Web App初探](https://github.com/mrLeung/blogs/blob/master/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/Progress%20Web%20App%20%E5%88%9D%E6%8E%A2.md)
