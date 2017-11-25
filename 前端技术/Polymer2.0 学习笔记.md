@@ -39,7 +39,7 @@ compute(item){
 ![此处输入图片的描述][2]
 &nbsp;
 
-3. 我们再查看``__debounceRender``的代码，可以看出这里异步调用了`` __render``函数，然后大家不用猜也知道``__render`在dom-repeat里是干嘛的了`。
+3. 我们再查看``__debounceRender``的代码，可以看出这里异步调用了`` __render``函数，然后大家不用猜也知道``__render``在dom-repeat里是干嘛的了。
 
 ![此处输入图片的描述][3]
 &nbsp;
