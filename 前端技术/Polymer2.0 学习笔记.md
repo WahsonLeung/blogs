@@ -29,7 +29,7 @@ compute(item){
 
 原因分析：
 
-1. 首先，我们试着通过打断点的方式，查明dom-repeat的渲染时机，那么首先办法构造一个切入点，如图，当dom-repeat渲染的时候，它必定会调用``compute``方法，我们在compute里面打上断点。
+1. 首先，我们试着通过打断点的方式，查明dom-repeat的渲染时机，那么首先想办法构造一个切入点，如图，当dom-repeat渲染的时候，它必定会调用``compute``方法，我们在compute里面打上断点。
 
 ![此处输入图片的描述][1]
 &nbsp;
@@ -39,7 +39,7 @@ compute(item){
 ![此处输入图片的描述][2]
 &nbsp;
 
-3. 我们再查看``__debounceRender``的代码，可以看出这里异步调用了`` __render``函数，然后大家不用猜也知道``__render`在dom-repeat里是干嘛的了`。
+3. 我们再查看``__debounceRender``的代码，可以看出这里异步调用了`` __render``函数，然后大家不用猜也知道``__render``在dom-repeat里是干嘛的了。
 
 ![此处输入图片的描述][3]
 &nbsp;
